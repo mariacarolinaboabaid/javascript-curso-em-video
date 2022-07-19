@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somando Números</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        h1{
+            margin: 40px 0px;
+        }
+        input#number01, input#number02{
+            height: 40px;
+            width: 180px;
+            border: 2px solid black;
+    
+        }
+        input#button{
+            height: 50px;
+            width: 100px;
+            margin-left: 20px;
+            border: 2px solid rgb(30, 193, 21);
+            background-color: rgb(30, 193, 21);
+            box-shadow: 0px 0px 9px rgb(30, 193, 21);
+            color: white;
+            font-size: 18px;
+        }
+        div{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid white;
+            box-shadow: 0px 0px 9px rgba(0, 0, 0, 0.729);
+            height: 150px;
+            width: 520px;
+            margin-top: 50px;
+
+        }
+    </style>
+</head>
+<body>
+    <h1>SOMANDO VALORES</h1>
+<!--Pedindo Nº 1-->
+    <input type="number" name="number01" id="number01"> +
+<!--Pedindo Nº 2-->
+    <input type="number" name="number02" id="number02" >
+<!--Botão de Somar-->
+    <input type="button" id="button" value="SOMAR" onclick="somar()">
+    <div id="resultado"></div>
+<!--JAVASCRIPT-->
+    <script>
+        function somar(){
+            var caixa_n1 = window.document.getElementById("number01")
+            var caixa_n2 = window.document.getElementById("number02")
+            var n1 = Number(caixa_n1.value)
+            var n2 = Number(caixa_n2.value)
+            var soma = n1 + n2
+            var res = window.document.getElementById("resultado")
+            res.innerText = `O RESULTADO DA SOMA É ${soma}`
+
+        }
+    </script>
+</body>
+</html>

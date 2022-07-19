@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos DOM</title>
+    <style>
+        body{
+            background-color: #7e55b392;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 20px;
+            font-weight: bold;
+            letter-spacing: 3px;
+        }
+        div{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            height: 30vh;
+            transform: translate(-50%, -50%);
+            width: 30vw;
+            border: 3px solid #EC368D;
+            border-radius: 10px;
+            background-color: #dbe641;
+            color: #EC368D;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="area" onclick="clicar()" onmouseenter="entrar()" onmouseout="sair()">
+        INTERAJA
+    </div>
+    <script>
+        var area = window.document.getElementById("area")
+        function clicar(){
+            area.innerText = "CLICOU"
+            area.style.backgroundColor = "red";
+            area.style.color = "white";
+            area.style.border = "3px solid white";
+        }
+        function entrar(){
+            area.innerText = "ENTROU"
+            area.style.backgroundColor = "green";
+            area.style.color = "white";
+            area.style.border = "3px solid white";
+        }
+        function sair(){
+            area.innerText = "SAIU"
+            area.style.backgroundColor = "#dbe641";
+            area.style.color = "#EC368D";
+            area.style.border = "3px solid #EC368D";
+        }
+    </script>
+</body>
+</html>
