@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DETRAN</title>
+    <style>
+        body{
+            background-color: #F4E76E;
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 2em;
+        }
+        input#txtvelocity{
+            height: 45px;
+            width: 300px;
+            font-size: 18px;
+        }
+        p#paragrafo_medida{
+            display: inline-block;
+            margin-left: 10px;
+        }
+        input#button{
+            height: 45px;
+            width: 90px;
+            margin-left: 20px;
+            background-color: green;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>SISTEMAS DE MULTAS</h1>
+    <p>PARA DESCOBRIR SE FOI MULTADO, INSIRA ABAIXO SUA VELOCIDADE:</p>
+    <input type="number" name="velocity" id="txtvelocity">
+    <p id="paragrafo_medida">KM/H</p>
+    <input id="button" type="button" value="Confirmar" onclick="calcular()">
+    <div id="resultado"></div>
+
+<!--JavaScript-->
+    <script>
+        function calcular (){
+            var txtvelocidade = window.document.getElementById("txtvelocity")
+            var velocidade = Number(txtvelocidade.value)
+            var res = window.document.getElementById("resultado")
+            if (velocidade > 80){
+                res.innerText = `Velocidade de ${velocidade} Km/h é superior a velocidade permitida de 80 Km/h. 
+                Você foi MULTADO!`
+            }
+            else{
+                res.innerText = `Velocidade de ${velocidade} Km/h está dentro da velocidade permitida de 80 Km/h. 
+                Você está livre de multa.`
+            }
+        }
+    </script>
+</body>
+</html>
