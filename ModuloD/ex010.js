@@ -7,3 +7,4 @@ else if (idade < 18 || idade > 65){
 } else {
         console.log('Voto obrigatório.')
 }
+
