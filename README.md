@@ -1,2 +1,2 @@
 # JavaScript
- Exercícios de JavaScript do Curso em Vídeo
+Exercícios de JavaScript do Curso em Vídeo.
